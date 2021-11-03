@@ -1,0 +1,40 @@
+// @ts-nocheck
+import React from 'react';
+import { ApplyPluginsType } from '/Users/lixiang/Desktop/trip/node_modules/umi/node_modules/@umijs/runtime';
+import * as umiExports from './umiExports';
+import { plugin } from './plugin';
+
+export function getRoutes() {
+  const routes = [
+  {
+    "path": "/",
+    "component": require('@/layouts/index.tsx').default,
+    "routes": [
+      {
+        "path": "/home",
+        "exact": true,
+        "component": require('@/pages/home/index.tsx').default
+      },
+      {
+        "path": "/order",
+        "exact": true,
+        "component": require('@/pages/order/index.tsx').default
+      },
+      {
+        "path": "/user",
+        "exact": true,
+        "component": require('@/pages/user/index.tsx').default
+      }
+    ]
+  }
+];
+
+  // allow user to extend routes
+  plugin.applyPlugins({
+    key: 'patchRoutes',
+    type: ApplyPluginsType.event,
+    args: { routes },
+  });
+
+  return routes;
+}
