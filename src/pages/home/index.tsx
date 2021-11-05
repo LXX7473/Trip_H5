@@ -1,9 +1,10 @@
-import React from 'react'
-import Header from './components/Header';
+import React, { useEffect } from 'react'
+import { Header, Search, Hot } from './components';
 import Style from './index.less';
-import Search from './components/Search';
-import Hot from './components/Hot'
+
 export default function Home() {
+
+
     return (
         <div className={Style.container}>
             {/* 头部 */}

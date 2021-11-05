@@ -8,22 +8,25 @@ export function getRoutes() {
   const routes = [
   {
     "path": "/",
-    "component": require('@/layouts/index.tsx').default,
+    "component": require('@/layouts/index').default,
     "routes": [
       {
-        "path": "/home",
-        "exact": true,
-        "component": require('@/pages/home/index.tsx').default
+        "path": "/",
+        "component": require('@/pages/home').default,
+        "title": "主页",
+        "exact": true
       },
       {
-        "path": "/order",
-        "exact": true,
-        "component": require('@/pages/order/index.tsx').default
+        "path": "/detail",
+        "component": require('@/pages/order').default,
+        "title": "详情",
+        "exact": true
       },
       {
         "path": "/user",
-        "exact": true,
-        "component": require('@/pages/user/index.tsx').default
+        "component": require('@/pages/user').default,
+        "title": "用户",
+        "exact": true
       }
     ]
   }

@@ -15,7 +15,9 @@
       "@@/*": ["src/.umi/*"],
       "@/components":["src/components"],
       "@/pages":["src/pages"],
-      "@/layouts":["src/layouts"]
+      "@/layouts":["src/layouts"],
+      "@/service":["src/service"],
+      "@/hooks":["src/hooks"]
     },
     "allowSyntheticDefaultImports": true
   },
