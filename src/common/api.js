@@ -60,7 +60,7 @@ function GET(url, params, options) {
   });
 }
 function POST(url, data, options) {
-  return fetchWithStatus(url, {
+  return request(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

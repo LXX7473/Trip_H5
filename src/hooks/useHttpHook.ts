@@ -16,7 +16,7 @@ const useHttpHook = (props: IProps) => {
     handleApi(params);
   }, watch)
 
-  const handleApi = async (params:Object) => {
+  const handleApi = async (params: Object) => {
     try {
       setLoading(true)
       const res = await api(params)

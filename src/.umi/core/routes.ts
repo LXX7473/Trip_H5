@@ -24,8 +24,20 @@ export function getRoutes() {
       },
       {
         "path": "/user",
-        "component": require('@/pages/user').default,
+        "component": require('@/pages/User/Detail').default,
         "title": "用户",
+        "exact": true
+      },
+      {
+        "path": "/login",
+        "component": require('@/pages/User/Login').default,
+        "title": "登录",
+        "exact": true
+      },
+      {
+        "path": "/register",
+        "component": require('@/pages/User/Register').default,
+        "title": "注册",
         "exact": true
       }
     ]
